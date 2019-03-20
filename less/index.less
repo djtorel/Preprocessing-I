@@ -5,15 +5,61 @@
 // Set html & body height to 100%
 @import './includes/_html-body-height.less';
 
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 // Make images responsive
 @import './includes/_images.less';
 
+// Mixins
+.font-roboto() {
+  font-family: 'Roboto', sans-serif;
+}
 .flex-layout(
-	@direction: row;
-	@wrap: nowrap;
-	@justify: flex-start;
-	@align-items: stretch;
-	@align-content: stretch) {
-
+@flow: row nowrap;
+@justify: flex-start;
+@alignt-items: stretch;
+@align-content: stretch
+) {
+  display: flex;
+  flex-flow: @flow;
+  justify-content: @justify;
 }
 
+// Classes
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.nav {
+  .flex-layout(@justify: flex-end);
+
+  margin: 1rem 0;
+}
+
+@link-color: black;
+.link {
+  .font-roboto();
+
+  margin-right: 2rem;
+  text-decoration: none;
+  color: @link-color;
+  transition: all 0.15s ease-in;
+  &:link,
+  &:visited {
+    transition: all 0.15s ease-in;
+  }
+  &:hover {
+    transition: all 0.15s ease-in;
+    color: lighten(@link-color; 40%);
+    text-decoration: underline;
+  }
+  &:active {
+    transition: all 0.15s ease-in;
+  }
+  &:focus {
+    text-decoration: underline;
+    transition: all 0.15s ease-in;
+    outline: 1px dotted currentColor;
+  }
+}
