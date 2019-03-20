@@ -1,0 +1,43 @@
+.font-roboto() {
+  font-family: 'Roboto', sans-serif;
+}
+.flex-layout(
+@flow: row nowrap;
+@justify: flex-start;
+@alignt-items: stretch;
+@align-content: stretch
+) {
+  display: flex;
+  flex-flow: @flow;
+  justify-content: @justify;
+}
+
+.col(@justify: flex-start; @align: stretch) {
+  .flex-layout(@flow: column nowrap; @justify; @align);
+}
+.row(@justify: flex-start; @align: stretch) {
+  .flex-layout(@flow: row nowrap; @justify; @align);
+}
+
+.link() {
+  text-decoration: none;
+  color: @link-color;
+  transition: color 0.15s ease-in;
+  &:link,
+  &:visited {
+    transition: color 0.15s ease-in;
+  }
+  &:hover {
+    transition: color 0.15s ease-in;
+    color: lighten(@link-color; 40%);
+    text-decoration: underline;
+  }
+  &:active {
+    transition: color 0.15s ease-in;
+  }
+  &:focus {
+    text-decoration: underline;
+    transition: color 0.15s ease-in;
+    outline: 1px dotted currentColor;
+  }
+}

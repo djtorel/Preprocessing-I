@@ -348,7 +348,7 @@ html {
   margin: 0 auto;
 }
 .container .wrapper {
-  padding: 0 1.25rem;
+  padding: 0 1.1rem;
 }
 .container .nav {
   display: flex;
@@ -460,11 +460,11 @@ html {
   width: 48%;
 }
 .container .mid-section .stuff {
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
 }
 .container .mid-section .item {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
 }
 .container .mid-section .item:nth-last-child(1) {
@@ -487,7 +487,7 @@ html {
   margin-top: 3rem;
 }
 .container .bottom-section .history {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .container .bottom-section .table {
   display: flex;
@@ -497,7 +497,7 @@ html {
 }
 .container .bottom-section .table .table-section {
   padding: 1rem 0.55rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .container .bottom-section .table .table-section:nth-child(2n) {
   background-color: #ddf7f2;

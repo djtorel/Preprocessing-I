@@ -13,50 +13,13 @@
 @import './includes/_images.less';
 
 // Mixins
-.font-roboto() {
-  font-family: 'Roboto', sans-serif;
-}
-.flex-layout(
-@flow: row nowrap;
-@justify: flex-start;
-@alignt-items: stretch;
-@align-content: stretch
-) {
-  display: flex;
-  flex-flow: @flow;
-  justify-content: @justify;
-}
+@import './includes/_mixins.less';
 
-.col(@justify: flex-start; @align: stretch) {
-  .flex-layout(@flow: column nowrap; @justify; @align);
-}
-.row(@justify: flex-start; @align: stretch) {
-  .flex-layout(@flow: row nowrap; @justify; @align);
-}
-
+// Global Variables
+@primary: #ddf7f2;
+@secondary: darken(@primary; 50%);
+@border: 1px solid rgba(0, 0, 0, 10%);
 @link-color: black;
-.link() {
-  text-decoration: none;
-  color: @link-color;
-  transition: color 0.15s ease-in;
-  &:link,
-  &:visited {
-    transition: color 0.15s ease-in;
-  }
-  &:hover {
-    transition: color 0.15s ease-in;
-    color: lighten(@link-color; 40%);
-    text-decoration: underline;
-  }
-  &:active {
-    transition: color 0.15s ease-in;
-  }
-  &:focus {
-    text-decoration: underline;
-    transition: color 0.15s ease-in;
-    outline: 1px dotted currentColor;
-  }
-}
 
 // Tags
 html {
@@ -69,7 +32,7 @@ html {
   margin: 0 auto;
 
   .wrapper {
-    padding: 0 1.25rem;
+    padding: 0 1.1rem;
   }
 
   .nav {
@@ -83,7 +46,7 @@ html {
   }
   .top-section {
     padding: 4rem 2rem;
-    background-color: #ddf7f2;
+    background-color: @primary;
     border-radius: 0.5rem;
 
     .test {
@@ -96,7 +59,7 @@ html {
     }
 
     .name-section {
-      border-bottom: 1px solid rgba(0, 0, 0, 10%);
+      border-bottom: @border;
       padding: 2rem 0;
       font-size: 1.25rem;
       .contact {
@@ -121,7 +84,7 @@ html {
       padding: 1rem 0;
     }
     .btn {
-      background-color: darken(#ddf7f2; 50%);
+      background-color: @secondary;
       color: white;
       padding: 1rem;
       border-radius: 0.5rem;
@@ -140,11 +103,11 @@ html {
       width: 48%;
     }
     .stuff {
-      border: 1px solid black;
+      border: @border;
       border-radius: 0.25rem;
     }
     .item {
-      border-bottom: 1px solid black;
+      border-bottom: @border;
       padding: 0.5rem;
       &:nth-last-child(1) {
         border-bottom: none;
@@ -163,7 +126,7 @@ html {
   .bottom-section {
     margin-top: 3rem;
     .history {
-      border-bottom: 1px solid black;
+      border-bottom: @border;
     }
     .table {
       .col();
@@ -171,9 +134,9 @@ html {
       margin-bottom: 3rem;
       .table-section {
         padding: 1rem 0.55rem;
-        border-bottom: 1px solid black;
+        border-bottom: @border;
         &:nth-child(2n) {
-          background-color: #ddf7f2;
+          background-color: @primary;
         }
         .row {
           .row(@justify: space-even);
@@ -197,7 +160,7 @@ html {
     }
   }
   .footer {
-    background-color: darken(#ddf7f2; 50%);
+    background-color: @secondary;
     color: white;
     text-align: center;
     padding: 3rem 0;
