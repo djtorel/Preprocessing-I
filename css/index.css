@@ -401,6 +401,10 @@ html {
   .container .top-section {
     padding: 0.3rem;
   }
+  .container .top-section .top-img-container {
+    height: 200px;
+    margin-bottom: 6rem;
+  }
 }
 .container .top-section .name-section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
