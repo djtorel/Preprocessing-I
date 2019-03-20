@@ -26,6 +26,10 @@
   justify-content: @justify;
 }
 
+.col() {
+  .flex-layout(@flow: column flex-start);
+}
+
 // Tags
 html {
   .font-roboto();
@@ -65,15 +69,11 @@ html {
       }
     }
   }
+  .top-section {
+    padding: 2rem;
+    background-color: #ddf7f2;
+    border-radius: 0.5rem;
 
-  .col {
-    .flex-layout(@flow: column flex-start);
-
-    &.top-section {
-      padding: 2rem;
-      background-color: #ddf7f2;
-      border-radius: 0.5rem;
-    }
     .top-img {
       max-width: 50%;
       border-radius: 0.5rem;
@@ -81,13 +81,16 @@ html {
     .border-bottom {
       border-bottom: 1px solid rgba(0, 0, 0, 10%);
     }
-
     .btn {
-      background-color: rgb(133, 55, 55);
+      background-color: darken(#ddf7f2; 50%);
       color: white;
       padding: 1rem;
       border-radius: 0.5rem;
-      border: 1px solid white;
+      border: none;
+      cursor: pointer;
     }
+  }
+
+  .mid-section {
   }
 }
