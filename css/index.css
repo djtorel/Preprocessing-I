@@ -326,6 +326,12 @@ body {
   font-weight: 400;
   src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+}
 /*
    IMAGES
 */
@@ -391,7 +397,7 @@ html {
 }
 .container .mid-section {
   display: flex;
-  flex-flow: row flex-start;
+  flex-flow: row nowrap;
   justify-content: space-between;
 }
 .container .mid-section .section-one {
@@ -416,7 +422,33 @@ html {
 }
 .container .bottom-section .table {
   display: flex;
-  flex-flow: column flex-start;
-  justify-content: space-between;
-  padding: 1rem;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+.container .bottom-section .table .table-section {
+  padding: 1rem 0.55rem;
+  border-bottom: 1px solid black;
+}
+.container .bottom-section .table .table-section:nth-child(2n) {
+  background-color: #ddf7f2;
+}
+.container .bottom-section .table .table-section .row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-even;
+}
+.container .bottom-section .table .table-section .row.bold {
+  font-weight: bold;
+}
+.container .bottom-section .table .table-section .row .years {
+  flex-basis: 10%;
+}
+.container .bottom-section .table .table-section .row .company {
+  flex-basis: 20%;
+}
+.container .bottom-section .table .table-section .row .title {
+  flex-basis: 40%;
+}
+.container .bottom-section .table .table-section .row .tech {
+  flex-basis: 30%;
 }
