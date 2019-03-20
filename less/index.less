@@ -26,8 +26,11 @@
   justify-content: @justify;
 }
 
-.col() {
-  .flex-layout(@flow: column flex-start);
+.col(@justify: flex-start) {
+  .flex-layout(@flow: column flex-start; @justify);
+}
+.row(@justify: flex-start) {
+  .flex-layout(@flow: row flex-start; @justify);
 }
 
 // Tags
@@ -46,7 +49,7 @@ html {
     margin: 1rem 0;
     @link-color: black;
     .link {
-      margin-right: 2rem;
+      margin-left: 2rem;
       text-decoration: none;
       color: @link-color;
       transition: color 0.15s ease-in;
@@ -92,5 +95,33 @@ html {
   }
 
   .mid-section {
+    .row(@justify: space-between);
+    .section-one {
+      width: 48%;
+    }
+    .section-two {
+      width: 48%;
+    }
+    .stuff {
+      border: 1px solid black;
+      border-radius: 0.25rem;
+    }
+    .item {
+      border-bottom: 1px solid black;
+      padding: 0.5rem;
+      &:nth-last-child(1) {
+        border-bottom: none;
+      }
+    }
+  }
+  .bottom-section {
+    .history {
+      border-bottom: 1px solid black;
+    }
+    .table {
+      .col(@justify: space-between);
+
+      padding: 1rem;
+    }
   }
 }

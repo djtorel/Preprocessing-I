@@ -347,7 +347,7 @@ html {
   margin: 1rem 0;
 }
 .container .nav .link {
-  margin-right: 2rem;
+  margin-left: 2rem;
   text-decoration: none;
   color: black;
   transition: color 0.15s ease-in;
@@ -388,4 +388,35 @@ html {
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
+}
+.container .mid-section {
+  display: flex;
+  flex-flow: row flex-start;
+  justify-content: space-between;
+}
+.container .mid-section .section-one {
+  width: 48%;
+}
+.container .mid-section .section-two {
+  width: 48%;
+}
+.container .mid-section .stuff {
+  border: 1px solid black;
+  border-radius: 0.25rem;
+}
+.container .mid-section .item {
+  border-bottom: 1px solid black;
+  padding: 0.5rem;
+}
+.container .mid-section .item:nth-last-child(1) {
+  border-bottom: none;
+}
+.container .bottom-section .history {
+  border-bottom: 1px solid black;
+}
+.container .bottom-section .table {
+  display: flex;
+  flex-flow: column flex-start;
+  justify-content: space-between;
+  padding: 1rem;
 }
