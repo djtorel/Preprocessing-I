@@ -347,6 +347,9 @@ html {
   max-width: 60rem;
   margin: 0 auto;
 }
+.container .wrapper {
+  padding: 0 1.25rem;
+}
 .container .nav {
   display: flex;
   flex-flow: row nowrap;
@@ -425,6 +428,14 @@ html {
   transition: color 0.15s ease-in;
   outline: 1px dotted currentColor;
 }
+@media (max-width: 500px) {
+  .container .top-section .name-section {
+    font-size: 0.7rem;
+  }
+  .container .top-section .name-section .contact-text {
+    font-size: 1.25rem;
+  }
+}
 .container .top-section .top-content p {
   padding: 1rem 0;
 }
@@ -458,6 +469,19 @@ html {
 }
 .container .mid-section .item:nth-last-child(1) {
   border-bottom: none;
+}
+@media (max-width: 500px) {
+  .container .mid-section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+  }
+  .container .mid-section .section-one {
+    width: 100%;
+  }
+  .container .mid-section .section-two {
+    width: 100%;
+  }
 }
 .container .bottom-section {
   margin-top: 3rem;
