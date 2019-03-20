@@ -7,6 +7,7 @@
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
 
 // Make images responsive
 @import './includes/_images.less';
@@ -33,6 +34,30 @@
   .flex-layout(@flow: row nowrap; @justify; @align);
 }
 
+@link-color: black;
+.link() {
+  text-decoration: none;
+  color: @link-color;
+  transition: color 0.15s ease-in;
+  &:link,
+  &:visited {
+    transition: color 0.15s ease-in;
+  }
+  &:hover {
+    transition: color 0.15s ease-in;
+    color: lighten(@link-color; 40%);
+    text-decoration: underline;
+  }
+  &:active {
+    transition: color 0.15s ease-in;
+  }
+  &:focus {
+    text-decoration: underline;
+    transition: color 0.15s ease-in;
+    outline: 1px dotted currentColor;
+  }
+}
+
 // Tags
 html {
   .font-roboto();
@@ -47,42 +72,43 @@ html {
     .flex-layout(@justify: flex-end);
 
     margin: 1rem 0;
-    @link-color: black;
     .link {
       margin-left: 2rem;
-      text-decoration: none;
-      color: @link-color;
-      transition: color 0.15s ease-in;
-      &:link,
-      &:visited {
-        transition: color 0.15s ease-in;
-      }
-      &:hover {
-        transition: color 0.15s ease-in;
-        color: lighten(@link-color; 40%);
-        text-decoration: underline;
-      }
-      &:active {
-        transition: color 0.15s ease-in;
-      }
-      &:focus {
-        text-decoration: underline;
-        transition: color 0.15s ease-in;
-        outline: 1px dotted currentColor;
-      }
+      .link();
     }
   }
   .top-section {
-    padding: 2rem;
+    padding: 4rem 2rem;
     background-color: #ddf7f2;
     border-radius: 0.5rem;
 
-    .top-img {
-      max-width: 50%;
+    .test {
+      max-height: 300px;
+      overflow: hidden;
       border-radius: 0.5rem;
     }
-    .border-bottom {
+    .top-img {
+      border-radius: 0.5rem;
+    }
+
+    .name-section {
       border-bottom: 1px solid rgba(0, 0, 0, 10%);
+      padding: 2rem 0;
+      font-size: 1.25rem;
+      .contact {
+        .row(@justify: space-around);
+        i {
+          font-size: 4rem;
+        }
+        .link {
+          .link();
+        }
+
+        text-align: center;
+      }
+    }
+    .top-content p {
+      padding: 1rem 0;
     }
     .btn {
       background-color: darken(#ddf7f2; 50%);
@@ -95,6 +121,7 @@ html {
   }
 
   .mid-section {
+    margin-top: 3rem;
     .row(@justify: space-between);
     .section-one {
       width: 48%;
@@ -115,11 +142,14 @@ html {
     }
   }
   .bottom-section {
+    margin-top: 3rem;
     .history {
       border-bottom: 1px solid black;
     }
     .table {
       .col();
+
+      margin-bottom: 3rem;
       .table-section {
         padding: 1rem 0.55rem;
         border-bottom: 1px solid black;

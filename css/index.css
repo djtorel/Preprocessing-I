@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
 html {
   line-height: 1.15;
   /* 1 */
@@ -376,16 +377,56 @@ html {
   outline: 1px dotted currentColor;
 }
 .container .top-section {
-  padding: 2rem;
+  padding: 4rem 2rem;
   background-color: #ddf7f2;
   border-radius: 0.5rem;
 }
-.container .top-section .top-img {
-  max-width: 50%;
+.container .top-section .test {
+  max-height: 300px;
+  overflow: hidden;
   border-radius: 0.5rem;
 }
-.container .top-section .border-bottom {
+.container .top-section .top-img {
+  border-radius: 0.5rem;
+}
+.container .top-section .name-section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+  font-size: 1.25rem;
+}
+.container .top-section .name-section .contact {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  text-align: center;
+}
+.container .top-section .name-section .contact i {
+  font-size: 4rem;
+}
+.container .top-section .name-section .contact .link {
+  text-decoration: none;
+  color: black;
+  transition: color 0.15s ease-in;
+}
+.container .top-section .name-section .contact .link:link,
+.container .top-section .name-section .contact .link:visited {
+  transition: color 0.15s ease-in;
+}
+.container .top-section .name-section .contact .link:hover {
+  transition: color 0.15s ease-in;
+  color: #666666;
+  text-decoration: underline;
+}
+.container .top-section .name-section .contact .link:active {
+  transition: color 0.15s ease-in;
+}
+.container .top-section .name-section .contact .link:focus {
+  text-decoration: underline;
+  transition: color 0.15s ease-in;
+  outline: 1px dotted currentColor;
+}
+.container .top-section .top-content p {
+  padding: 1rem 0;
 }
 .container .top-section .btn {
   background-color: #29ac93;
@@ -396,6 +437,7 @@ html {
   cursor: pointer;
 }
 .container .mid-section {
+  margin-top: 3rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -417,6 +459,9 @@ html {
 .container .mid-section .item:nth-last-child(1) {
   border-bottom: none;
 }
+.container .bottom-section {
+  margin-top: 3rem;
+}
 .container .bottom-section .history {
   border-bottom: 1px solid black;
 }
@@ -424,6 +469,7 @@ html {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
+  margin-bottom: 3rem;
 }
 .container .bottom-section .table .table-section {
   padding: 1rem 0.55rem;
