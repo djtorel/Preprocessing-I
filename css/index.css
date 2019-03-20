@@ -350,6 +350,11 @@ html {
 .container .wrapper {
   padding: 0 1.1rem;
 }
+@media (max-width: 500px) {
+  .container .wrapper {
+    padding: 0 0.6rem;
+  }
+}
 .container .nav {
   display: flex;
   flex-flow: row nowrap;
@@ -384,13 +389,18 @@ html {
   background-color: #ddf7f2;
   border-radius: 0.5rem;
 }
-.container .top-section .test {
-  max-height: 300px;
+.container .top-section .top-img-container {
+  height: 300px;
   overflow: hidden;
   border-radius: 0.5rem;
 }
 .container .top-section .top-img {
   border-radius: 0.5rem;
+}
+@media (max-width: 500px) {
+  .container .top-section {
+    padding: 0.3rem;
+  }
 }
 .container .top-section .name-section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -430,10 +440,14 @@ html {
 }
 @media (max-width: 500px) {
   .container .top-section .name-section {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+    margin-top: -7rem;
   }
   .container .top-section .name-section .contact-text {
     font-size: 1.25rem;
+  }
+  .container .top-section .name-section .title {
+    display: none;
   }
 }
 .container .top-section .top-content p {
