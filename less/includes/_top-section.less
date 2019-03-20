@@ -1,0 +1,48 @@
+.top-section {
+  padding: 4rem 2rem;
+  background-color: @primary;
+  border-radius: 0.5rem;
+
+  .test {
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+  .top-img {
+    border-radius: 0.5rem;
+  }
+
+  .name-section {
+    border-bottom: @border;
+    padding: 2rem 0;
+    font-size: 1.25rem;
+    .contact {
+      .row(@justify: space-around);
+      i {
+        font-size: 4rem;
+      }
+      .link {
+        .link();
+      }
+
+      text-align: center;
+    }
+    @media (max-width: 500px) {
+      font-size: 0.7rem;
+      .contact-text {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  .top-content p {
+    padding: 1rem 0;
+  }
+  .btn {
+    background-color: @secondary;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+  }
+}
