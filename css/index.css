@@ -452,3 +452,10 @@ html {
 .container .bottom-section .table .table-section .row .tech {
   flex-basis: 30%;
 }
+.container .footer {
+  background-color: #29ac93;
+  color: white;
+  text-align: center;
+  padding: 3rem 0;
+  font-weight: bold;
+}
