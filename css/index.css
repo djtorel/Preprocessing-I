@@ -359,6 +359,8 @@ html {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+  align-items: stretch;
+  align-content: stretch;
   margin: 1rem 0;
 }
 .container .nav .link {
@@ -394,7 +396,7 @@ html {
   overflow: hidden;
   border-radius: 0.5rem;
 }
-.container .top-section .top-img {
+.container .top-section .top-img-container .top-img {
   border-radius: 0.5rem;
 }
 @media (max-width: 500px) {
@@ -416,6 +418,8 @@ html {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
   text-align: center;
 }
 .container .top-section .name-section .contact i {
@@ -471,6 +475,8 @@ html {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
 }
 .container .mid-section .section-one {
   width: 48%;
@@ -494,6 +500,8 @@ html {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
   }
   .container .mid-section .section-one {
     width: 100%;
@@ -512,6 +520,8 @@ html {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
   margin-bottom: 3rem;
 }
 .container .bottom-section .table .table-section {
@@ -524,7 +534,9 @@ html {
 .container .bottom-section .table .table-section .row {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-even;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
 }
 .container .bottom-section .table .table-section .row.bold {
   font-weight: bold;
