@@ -1,0 +1,30 @@
+.mid-section {
+  margin-top: 3rem;
+  .row(@justify: space-between);
+  .section-one {
+    width: 48%;
+  }
+  .section-two {
+    width: 48%;
+  }
+  .stuff {
+    border: @border;
+    border-radius: 0.25rem;
+  }
+  .item {
+    border-bottom: @border;
+    padding: 0.5rem;
+    &:nth-last-child(1) {
+      border-bottom: none;
+    }
+  }
+  @media (max-width: 500px) {
+    .col();
+    .section-one {
+      width: 100%;
+    }
+    .section-two {
+      width: 100%;
+    }
+  }
+}
